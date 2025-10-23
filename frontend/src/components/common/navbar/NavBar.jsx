@@ -29,6 +29,7 @@ const NavBar = () => {
       {item.url.startsWith("/") ? (
         <RouterLink
           to={item.url}
+          target="_blank"
           className={`px-5 py-3 mx-1 ${
             theme === 'light' 
               ? 'hover:text-picto-primary text-black' 
