@@ -3,9 +3,11 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { MyContext } from "../../Context/Context";
+import { useNavigate } from "react-router-dom";
 
 const Projects = ({ data }) => {
   const { theme } = useContext(MyContext);
+  const navigate = useNavigate();
 
   return (
     <div
@@ -14,7 +16,7 @@ const Projects = ({ data }) => {
           ? 'outline-[#FFFFFF] shadow-gray-300 border border-gray-200 bg-white' 
           : 'shadow-gray-900 border border-gray-700 bg-gray-800'
       }`}
-      onClick={() => window.open(`/projectdetails/${data.id}`)}
+      onClick={() => navigate(`/appdetails/${data.id}`)}
     >
       <img
         src={data?.image}

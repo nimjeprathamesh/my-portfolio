@@ -1,14 +1,12 @@
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { MyContext } from "../../Context/Context";
 
 const Apps = ({ data }) => {
     const { theme } = useContext(MyContext);
-    const handleCardClick = () => {
-        window.open(`/appdetails/${data.id}`);
-    };
-
+    const navigate = useNavigate();
     const handleLiveLinkClick = (e) => {
         e.stopPropagation();
     };
@@ -20,7 +18,7 @@ const Apps = ({ data }) => {
                     ? 'bg-white border border-gray-200 shadow-gray-300 outline-[#FFFFFF]'
                     : 'bg-gray-800 border border-gray-700 shadow-gray-900 outline-[#1F2937]'
             }`}
-            onClick={handleCardClick}
+            onClick={() => navigate(`/appdetails/${data.id}`)}
         >
             <img
                 src={data?.image}
