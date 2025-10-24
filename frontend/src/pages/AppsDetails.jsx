@@ -79,7 +79,6 @@ export default function AppsDetails() {
                 </div>
                 <a
                     href={project?.link}
-                    target="_blank"
                     rel="noopener noreferrer"
                     className={`btn hover:border-picto-primary hover:text-picto-primary text-sm xs:text-[16px] font-semibold hover:gap-3 xs:hover:gap-4 transition-all duration-300 py-2 px-6 w-full sm:w-auto text-center mt-2 sm:mt-5 inline-block ${theme === 'light' ? 'bg-white text-gray-900 hover:bg-gray-50' : 'bg-gray-700 text-white hover:bg-gray-600'}`}
                 >

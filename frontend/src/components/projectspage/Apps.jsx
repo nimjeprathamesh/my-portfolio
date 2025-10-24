@@ -6,7 +6,7 @@ import { MyContext } from "../../Context/Context";
 const Apps = ({ data }) => {
     const { theme } = useContext(MyContext);
     const handleCardClick = () => {
-        window.open(`/appdetails/${data.id}`, '_blank');
+        window.open(`/appdetails/${data.id}`);
     };
 
     const handleLiveLinkClick = (e) => {
@@ -44,7 +44,6 @@ const Apps = ({ data }) => {
                 
                 <a
                     href={data?.link}
-                    target="_blank"
                     rel="noopener noreferrer"
                     onClick={handleLiveLinkClick}
                     className={`btn hover:border-picto-primary hover:text-picto-primary text-sm xs:text-[16px] font-semibold hover:gap-3 xs:hover:gap-4 transition-all duration-300 py-2 px-6 w-full sm:w-auto text-center mt-5 inline-block ${

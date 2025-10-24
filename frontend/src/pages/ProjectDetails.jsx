@@ -36,7 +36,6 @@ export default function ProjectDetails() {
             <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-4 sm:gap-8 w-full max-w-md sm:max-w-lg mt-5">
                 <a
                     href={project?.source}
-                    target="_blank"
                     className={`btn hover:border-picto-primary hover:text-picto-primary text-sm xs:text-[16px] font-semibold hover:gap-3 xs:hover:gap-4 transition-all duration-300 py-3 px-6 w-full sm:w-auto text-center ${theme === 'light' ? 'bg-white text-gray-900 hover:bg-gray-50' : 'bg-gray-700 text-white hover:bg-gray-600'}`}
                 >
                     Source Code
@@ -46,7 +45,6 @@ export default function ProjectDetails() {
                 </a>
                 <a
                     href={project?.link}
-                    target="_blank"
                     className={`btn hover:border-picto-primary hover:text-picto-primary text-sm xs:text-[16px] font-semibold hover:gap-3 xs:hover:gap-4 transition-all duration-300 py-3 px-6 w-full sm:w-auto text-center ${theme === 'light' ? 'bg-white text-gray-900 hover:bg-gray-50' : 'bg-gray-700 text-white hover:bg-gray-600'}`}
                 >
                     Live Link

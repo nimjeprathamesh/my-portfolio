@@ -14,7 +14,7 @@ const Projects = ({ data }) => {
           ? 'outline-[#FFFFFF] shadow-gray-300 border border-gray-200 bg-white' 
           : 'shadow-gray-900 border border-gray-700 bg-gray-800'
       }`}
-      onClick={() => window.open(`/projectdetails/${data.id}`, '_blank')}
+      onClick={() => window.open(`/projectdetails/${data.id}`)}
     >
       <img
         src={data?.image}
@@ -45,7 +45,6 @@ const Projects = ({ data }) => {
         <div className="flex flex-col sm:flex-row gap-3 mt-5">
           <a
             href={data?.source}
-            target="_blank"
             className={`btn hover:border-picto-primary hover:text-picto-primary text-sm xs:text-[16px] font-semibold hover:gap-3 xs:hover:gap-4 transition-all duration-300 py-3 px-6 w-full sm:w-auto text-center ${
               theme === 'light' 
                 ? 'bg-white text-black border-gray-300' 
@@ -60,7 +59,6 @@ const Projects = ({ data }) => {
 
           <a
             href={data?.link}
-            target="_blank"
             className={`btn hover:border-picto-primary hover:text-picto-primary text-sm xs:text-[16px] font-semibold hover:gap-3 xs:hover:gap-4 transition-all duration-300 py-3 px-6 w-full sm:w-auto text-center ${
               theme === 'light' 
                 ? 'bg-white text-black border-gray-300' 

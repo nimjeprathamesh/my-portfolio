@@ -69,7 +69,6 @@ const NavBar = () => {
     <li className="p-2">
       <a
         href="/Prathamesh_Nimje_Resume.pdf"
-        target="_blank"
         rel="noopener noreferrer"
         className={`w-full flex items-center justify-start p-2 rounded-md transition-colors ${
           theme === 'light' 
@@ -180,7 +179,6 @@ const NavBar = () => {
             <a
               className="btn btn-sm xs:btn-md sm:btn-lg btn-primary"
               href="/Prathamesh_Nimje_Resume.pdf"
-              target="_blank"
               rel="noopener noreferrer"
             >
               Resume

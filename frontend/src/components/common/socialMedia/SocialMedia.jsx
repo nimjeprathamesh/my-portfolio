@@ -15,7 +15,6 @@ const SocialMedia = ({ position }) => {
       {socialIcons.map((item, index) => (
         <a
           href={item.link}
-          target="_blank"
           rel="noopener noreferrer"
           className={`flex p-2 xs:p-2.5 sm:p-3 rounded-md transition-colors duration-300 ${
             theme === 'light'

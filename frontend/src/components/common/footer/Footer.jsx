@@ -42,7 +42,7 @@ const Footer = () => {
       </div>
       <p className="text-white text-center max-xs:text-[12px] max-md:text-[14px] w-full py-10">
         Developed ❤️ by{" "}
-        <a className="font-bold" target="_blank" rel="noopener noreferrer">
+        <a className="font-bold" rel="noopener noreferrer">
           me
         </a>
       </p>

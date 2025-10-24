@@ -83,7 +83,6 @@ const Profile = () => {
             <a
               className="btn xxs:btn-lg px-6 max-xs:px-2 xxs:py-3 btn-primary text-xs xxs:text-[14px] sm:text-[16px]"
               href="https://github.com/nimjeprathamesh/nimjeprathamesh"
-              target="_blank"
               rel="noopener noreferrer"
             >
               My Projects
