@@ -29,6 +29,7 @@ const NavBar = () => {
       {item.url.startsWith("/") ? (
         <RouterLink
           to={item.url}
+          target="_blank"
           className={`px-5 py-3 mx-1 ${
             theme === 'light' 
               ? 'hover:text-picto-primary text-black' 
@@ -69,12 +70,9 @@ const NavBar = () => {
     <li className="p-2">
       <a
         href="/Prathamesh_Nimje_Resume.pdf"
+        target="_blank"
         rel="noopener noreferrer"
-        className={`w-full flex items-center justify-start p-2 rounded-md transition-colors ${
-          theme === 'light' 
-            ? 'hover:bg-gray-100 text-black' 
-            : 'hover:bg-gray-700 text-white'
-        }`}
+        className="flex items-center justify-start p-2 rounded-md transition-colors bg-[#ff9f1c] text-[#fff] border-0 hover:bg-[#ff7f1c] font-semibold ml-4"
       >
         <span className="font-medium">Resume</span>
       </a>
@@ -177,8 +175,9 @@ const NavBar = () => {
           </ul>
           <p className="hidden lg:block">
             <a
-              className="btn btn-sm xs:btn-md sm:btn-lg btn-primary"
+              className="btn btn-sm xs:btn-md sm:btn-lg bg-[#ff9f1c] text-[#fff] border-0 hover:bg-[#ff7f1c] font-semibold ml-4"
               href="/Prathamesh_Nimje_Resume.pdf"
+              target="_blank"
               rel="noopener noreferrer"
             >
               Resume

@@ -2,9 +2,11 @@ import { useContext } from "react";
 import Projects from "./Projects";
 import { MyContext } from "../../Context/Context";
 import { projectData } from "../../utils/constants";
+import { useNavigate } from "react-router-dom";
 
 const Portfolio = () => {
   const { theme } = useContext(MyContext);
+  const navigate = useNavigate();
 
   return (
     <div
@@ -35,8 +37,8 @@ const Portfolio = () => {
       </div>
       <div className="text-center">
         <a
-          href="/projects"
           className="btn btn-primary py-3 px-6 mt-12.5 text-center text-[16px] font-semibold"
+          onClick={() => navigate("/projects")}
         >
           More Projects
         </a>

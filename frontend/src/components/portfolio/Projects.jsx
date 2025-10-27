@@ -4,7 +4,6 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { MyContext } from "../../Context/Context";
 import { useNavigate } from "react-router-dom";
-
 const Projects = ({ data }) => {
   const { theme } = useContext(MyContext);
   const navigate = useNavigate();
