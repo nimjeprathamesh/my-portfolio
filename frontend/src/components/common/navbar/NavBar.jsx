@@ -1,7 +1,7 @@
 import { useEffect, useState, useContext } from "react";
 import logo from "../../../assets/logo.png";
 import { Link as ScrollLink } from "react-scroll";
-import { Link as RouterLink, useLocation } from "react-router-dom";
+import { Link as RouterLink, useLocation, useNavigate } from "react-router-dom";
 import { TiWeatherSunny } from "react-icons/ti";
 import { IoMoonOutline } from "react-icons/io5";
 import { MyContext } from "../../../Context/Context";
@@ -16,7 +16,11 @@ const handleMenuClick = () => {
 const NavBar = () => {
   const [position, setPosition] = useState(0);
   const location = useLocation();
+  const navigate = useNavigate();
   const { theme, toggleTheme } = useContext(MyContext);
+  
+  // Check if we're on the home page
+  const isHomePage = location.pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => setPosition(window.scrollY);
@@ -24,53 +28,94 @@ const NavBar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const menu = navItems.map((item) => (
-    <li key={item.id} onMouseDown={(e) => e.preventDefault()}>
-      {item.url.startsWith("/") ? (
+  const menu = navItems.map((item) => {
+    // For route links (starting with "/")
+    if (item?.url?.startsWith("/")) {
+      return (
+        <li key={item.id} onMouseDown={(e) => e.preventDefault()}>
+          <RouterLink
+            to={item.url}
+            rel="noopener noreferrer"
+            className={`px-5 py-3 mx-1 ${
+              theme === 'light' 
+                ? 'hover:text-picto-primary text-black' 
+                : 'hover:text-picto-primary text-white hover:bg-[#1E2939] hover:rounded-md'
+            } ${location.pathname === item.url ? "bg-[#9929fb] text-white rounded-md" : ""}`}
+            onClick={handleMenuClick}
+          >
+            {item.icon}
+            {item.name}
+          </RouterLink>
+        </li>
+      );
+    }
+
+    // For scroll links - only use ScrollLink on home page
+    if (isHomePage) {
+      return (
+        <li key={item.id} onMouseDown={(e) => e.preventDefault()}>
+          <ScrollLink
+            onClick={handleMenuClick}
+            to={item.url.toLowerCase()}
+            smooth={true}
+            duration={1000}
+            spy={true}
+            offset={-140}
+            activeStyle={{
+              backgroundColor: "#9929fb",
+              color: "white",
+              borderRadius: "0.375rem",
+            }}
+            className={`px-5 py-3 mx-1 ${
+              theme === 'light' 
+                ? 'hover:text-picto-primary text-black' 
+                : 'hover:text-picto-primary text-white hover:bg-[#1E2939] hover:rounded-md'
+            }`}
+          >
+            {item.icon}
+            {item.name}
+          </ScrollLink>
+        </li>
+      );
+    }
+
+    // When not on home page, convert to regular links that navigate to home with hash
+    return (
+      <li key={item.id} onMouseDown={(e) => e.preventDefault()}>
         <RouterLink
-          to={item.url}
-          target="_blank"
-          className={`px-5 py-3 mx-1 ${
-            theme === 'light' 
-              ? 'hover:text-picto-primary text-black' 
-              : 'hover:text-picto-primary text-white hover:bg-[#1E2939] hover:rounded-md'
-          } ${location.pathname === item.url ? "bg-[#9929fb] text-white rounded-md" : ""}`}
-          onClick={handleMenuClick}
-        >
-          {item.icon}
-          {item.name}
-        </RouterLink>
-      ) : (
-        <ScrollLink
-          onClick={handleMenuClick}
-          to={item.url.toLowerCase()}
-          smooth={true}
-          duration={1000}
-          spy={true}
-          offset={-140}
-          activeStyle={{
-            backgroundColor: "#9929fb",
-            color: "white",
-            borderRadius: "0.375rem",
-          }}
+          to={`/#${item.url.toLowerCase()}`}
           className={`px-5 py-3 mx-1 ${
             theme === 'light' 
               ? 'hover:text-picto-primary text-black' 
               : 'hover:text-picto-primary text-white hover:bg-[#1E2939] hover:rounded-md'
           }`}
+          onClick={(e) => {
+            e.preventDefault();
+            handleMenuClick();
+            // Navigate to home page with hash
+            navigate(`/#${item.url.toLowerCase()}`);
+            // After navigation, scroll to the section
+            setTimeout(() => {
+              const element = document.getElementById(item.url.toLowerCase());
+              if (element) {
+                const yOffset = -140;
+                const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+              }
+            }, 100);
+          }}
         >
           {item.icon}
           {item.name}
-        </ScrollLink>
-      )}
-    </li>
-  ));
+        </RouterLink>
+      </li>
+    );
+  });
 
   const resumeMobile = (
     <li className="p-2">
       <a
         href="/Prathamesh_Nimje_Resume.pdf"
-        target="_blank"
         rel="noopener noreferrer"
         className="flex items-center justify-start p-2 rounded-md transition-colors bg-[#ff9f1c] text-[#fff] border-0 hover:bg-[#ff7f1c] font-semibold ml-4"
       >
@@ -158,6 +203,11 @@ const NavBar = () => {
             smooth={true}
             duration={900}
             className="flex items-center border-0 lg:max-xxl:ps-5 cursor-pointer"
+            onClick={() => {
+              if (!isHomePage) {
+                navigate('/');
+              }
+            }}
           >
             <img src={logo} className="h-8 sm:h-14 rounded-2xl" alt="logo" />
             <p className={`text-2xl sm:text-[32px] my-auto ms-[12px] font-semibold ${
