@@ -67,7 +67,7 @@ export default function AppsDetails() {
                 alt={`${project?.image} image`}
                 className={`w-full max-w-sm sm:max-w-md lg:max-w-2xl mx-auto shadow-xl ${theme === 'light' ? 'shadow-[#aaa]' : 'shadow-gray-800'} rounded-xl`}
             />
-            <div className='flex flex-col sm:flex-row justify-between items-center py-4 sm:py-5 w-full gap-4 sm:gap-0'>
+            <div className='flex flex-col sm:flex-row justify-evenly items-center py-4 sm:py-5 w-full gap-4 sm:gap-0'>
                 <img
                     src={project?.logo}
                     alt={`${project?.image} image`}
