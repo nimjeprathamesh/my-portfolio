@@ -9,6 +9,7 @@ export default function Projects() {
     return (
         <div className={theme === 'dark' ? 'bg-gray-800' : 'bg-soft-white'}>
             <AndroidApps />
+            <ShopifyApps />
             <ProjectsPage />
         </div>
     );

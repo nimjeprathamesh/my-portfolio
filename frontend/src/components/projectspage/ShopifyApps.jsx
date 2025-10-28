@@ -8,7 +8,7 @@ const ShopifyApps = () => {
 
     return (
         <div
-            className="content pt-10 md:pt-15 xl:pt-25 pb-10 md:pb-25 max-xxl:p-2"
+            className="content"
             id="portfolio"
         >
             <div className="xl:mb-17.5 mb-5">
