@@ -135,6 +135,25 @@ export const androidData = [
     },
 ];
 
+export const shopifyData = [
+    {
+        id: 1,
+        image: 'https://cdn.shopify.com/app-store/listing_images/d3e078004acc95fe018f6db932904d58/promotional_image/CPOKy6HCg4oDEAE=.jpeg',
+        title: "RG Quick Builk Product Editor",
+        description:
+            "RG Quick & Bulk Product Editor is a powerful app designed to simplify product management. Effortlessly edit product details, prices, inventory, and more in bulk or individually—all in one intuitive interface. Save time, reduce errors, and streamline your store updates with this must-have tool for efficient store management.",
+        link: "https://apps.shopify.com/rg-bulk-product-editor?st_source=autocomplete&surface_detail=autocomplete_apps",
+    },
+    {
+        id: 2,
+        image: 'https://cdn.shopify.com/app-store/listing_images/0783853fabbdfd4f0c735378fbcc1de5/promotional_image/CJS94eTXtI4DEAE=.png',
+        title: "RG Products Image Gallery",
+        description:
+            "The RG Products Image Gallery automatically fetches all product images from your Shopify store and displays them in a clean, organized gallery. It updates in real-time as products are added or removed, saving you time and effort. This dynamic gallery enhances your store’s visual appeal and improves user experience.",
+        link: "https://apps.shopify.com/rg-products-image-gallery?st_source=autocomplete&surface_detail=autocomplete_apps",
+    },
+];
+
 export const skillCategories = {
     Languages: [
         { name: "HTML5", icon: <FaHtml5 className="text-orange-500" /> },
@@ -249,6 +268,29 @@ export const androidDetailsData = [
         description:
             "Smart Money Collection App\nIntroducing Smart Money Collection App, your ultimate solution for hassle-free cash collection. Designed for every Android user, this app is ideal for daily cash collection agents, small business owners, freelancers, and anyone who regularly handles payments. It simplifies money collection, streamlines operations, and eliminates the need for manual recording of transactions, receipts, and client data. With its easy-to-use interface, real-time tracking, and secure data handling, managing collections has never been easier.\nSecure & Easy Login\nThe app offers a robust login and registration system, ensuring user information is protected at all times. Users can quickly register and log in securely, without worrying about unauthorized access. All transactions are encrypted, and real-time cash tracking ensures your financial records are accurate, safe, and always accessible. Whether managing business or personal collections, the app guarantees a secure, smooth, and transparent experience.\nUser Management\nSmart Money Collection App allows you to record detailed information about clients, including name, phone number, email, amount to be collected, and type of package (daily, weekly, or monthly). Users can easily add, edit, or delete records, ensuring flexibility and accuracy in managing collections. The app keeps a complete history of transactions, helping you maintain precise records for every client, big or small, individual or bulk.\nEfficient Money Management\nThe app supports both individual and bulk transactions, tracking collections according to each client’s package. You can view complete collection histories and client data in real-time. Bulk Collection features allow handling multiple clients and transactions with ease, ensuring no confusion or errors in recording. This ensures a smoother workflow and better cash management for all users.\nDashboard & Insights\nSmart Money Collection App comes with a comprehensive Dashboard that provides instant summaries of your collections. You can view collections for today, yesterday, week, month, or year through interactive cards. Each card displays detailed, user-wise receipts, which can be shared via WhatsApp, SMS, or other channels. The Dashboard also highlights insights such as the highest collection from clients, offering a clear and instant view of your cash flow.\nReports & Analytics\nGenerate detailed reports for individual clients or overall collections. The app allows filtering by dates, client, or package, providing precise analytics in Excel format. Reports can be easily shared with stakeholders through WhatsApp, SMS, email, or other channels. This feature ensures transparency and accountability in all transactions.\nReceipt Sharing\nEvery transaction generates a digital receipt that can be instantly shared with clients, ensuring transparency and verification. This feature builds trust and maintains a clear record of all collections.\nGuidance & Ease of Use\nSmart Money Collection App is mobile-friendly, intuitive, and designed by expert developers to simplify cash handling. From recording transactions to generating and sharing receipts, the app streamlines every step of the money collection process. It helps small businesses, freelancers, and entrepreneurs manage receivables efficiently, reduce errors, and accelerate cash flow.\nWith Smart Money Collection App, say goodbye to manual tracking, delayed payments, and entry errors. Enjoy a secure, streamlined, and highly efficient money collection process, and take control of your cash flow like never before.",
         link: "https://play.google.com/store/apps/details?id=com.peccular.moneycollect",
+    },
+];
+
+export const shopifyDetailsData = [
+    {
+        id: 1,
+        image: "https://cdn.shopify.com/app-store/listing_images/d3e078004acc95fe018f6db932904d58/promotional_image/CPOKy6HCg4oDEAE=.jpeg?height=720&quality=90&width=1280",
+        logo: 'https://cdn.shopify.com/s/files/applications/d3e078004acc95fe018f6db932904d58.png?1732270841',
+        title: "RG Quick Bulk Product Editor",
+        short_desc: "Quickly edit products.",
+        description:
+            "RG Quick & Bulk Product Editor is a powerful app designed to simplify product management. Effortlessly edit product details, prices, inventory, and more in bulk or individually—all in one intuitive interface. Save time, reduce errors, and streamline your store updates with this must-have tool for efficient store management.\nQuick Edits: Update products effortlessly without switching between pages.\nFilter by title, tags, collection, or inventory for fast and accurate edits\nUser-Friendly Interface: Enjoy a clean, responsive, and easy-to-use design.\nReal-Time Updates: Sync all changes instantly with your store.\nSecure: Compliant with API for data safety and reliability.",
+        link: "https://apps.shopify.com/rg-bulk-product-editor?st_source=autocomplete&surface_detail=autocomplete_apps",
+    },
+    {
+        id: 2,
+        image: "https://cdn.shopify.com/app-store/listing_images/0783853fabbdfd4f0c735378fbcc1de5/promotional_image/CJS94eTXtI4DEAE=.png",
+        logo: 'https://cdn.shopify.com/s/files/applications/0783853fabbdfd4f0c735378fbcc1de5.png?1752227066',
+        title: "Mechanic Invoice Manager",
+        short_desc: "Display the images of stoare as image gallery.",
+        description:
+            "Auto-fetch all store images and display them in a dynamic, organized product image gallery\nThe RG Products Image Gallery automatically fetches all product images from your Shopify store and displays them in a clean, organized gallery. It updates in real-time as products are added or removed, saving you time and effort. This dynamic gallery enhances your store’s visual appeal and improves user experience. It’s easy to integrate, fully responsive, and works seamlessly with any Shopify theme, making it a perfect solution for showcasing your products beautifully.\nAutomatically syncs and updates all product images from your store.\nDisplays images in a clean, responsive, and organized gallery layout.\nEasy integration with any Shopify theme, no coding required.",
+        link: "https://apps.shopify.com/rg-products-image-gallery?st_source=autocomplete&surface_detail=autocomplete_apps",
     },
 ];
 

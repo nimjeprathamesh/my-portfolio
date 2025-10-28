@@ -4,6 +4,7 @@ import Loading from "../components/common/loading/Loading";
 import Projects from "../pages/Projects";
 import ProjectDetails from "../pages/ProjectDetails";
 import AppsDetails from "../pages/AppsDetails";
+import ShopifyDetails from "../pages/ShopifyDetails";
 const Home = lazy(() => import("../pages/Home"));
 const Main = lazy(() => import("../layouts/Main"));
 
@@ -32,6 +33,10 @@ export const router = createBrowserRouter(
         {
           path: "/appdetails/:id",
           element: <AppsDetails />,
+        },
+        {
+          path: "/shopifydetails/:id",
+          element: <ShopifyDetails />,
         },
       ],
     },
