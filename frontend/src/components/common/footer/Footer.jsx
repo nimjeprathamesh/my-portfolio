@@ -48,7 +48,6 @@ const Footer = () => {
                 <RouterLink
                   key={item.id}
                   to={item.url}
-                  target="_blank"
                   rel="noopener noreferrer"
                   className={`mx-2 group inline-block relative w-fit text-[12px] sm:text-[16px] cursor-pointer ${
                     location.pathname === item.url ? 'font-bold' : ''
