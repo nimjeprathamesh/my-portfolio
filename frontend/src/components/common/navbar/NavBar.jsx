@@ -43,7 +43,6 @@ const NavBar = () => {
             } ${location.pathname === item.url ? "bg-[#9929fb] text-white rounded-md" : ""}`}
             onClick={handleMenuClick}
           >
-            {item.icon}
             {item.name}
           </RouterLink>
         </li>
@@ -72,7 +71,6 @@ const NavBar = () => {
                 : 'hover:text-picto-primary text-white hover:bg-[#1E2939] hover:rounded-md'
             }`}
           >
-            {item.icon}
             {item.name}
           </ScrollLink>
         </li>
@@ -105,7 +103,6 @@ const NavBar = () => {
             }, 100);
           }}
         >
-          {item.icon}
           {item.name}
         </RouterLink>
       </li>
