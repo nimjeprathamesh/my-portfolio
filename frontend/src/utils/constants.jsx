@@ -131,14 +131,14 @@ export const androidData = [
             "Introducing Smart Money Collection App, your ultimate solution for hassle-free cash collection. Designed for every Android user, this app is ideal for daily cash collection agents, small business owners, freelancers, and anyone who regularly handles payments. It simplifies money collection, streamlines operations, and eliminates the need for manual recording of transactions, receipts, and client data.",
         link: "https://play.google.com/store/apps/details?id=com.peccular.moneycollect",
     },
-    {
-        id: 4,
-        image: 'https://play-lh.googleusercontent.com/b8qE-m5Iuks42yYQLROLteUCDw1ufVs6dC91Z4xB7DjWRhqU51QXRLhAqKLjm1eqnDvm2lFU0YyO2BmLXdibww=w240-h480-rw',
-        title: "Entry Book - Visitor Management",
-        description:
-            "Entry Book – Visitor Management Android App is a modern digital system that replaces outdated manual logbooks used in offices, buildings, factories, warehouses, and events. Instead of recording visitor names, contact details, and purpose of visit on paper, your security personnel or gatekeeper can enter the information directly into the app using a smartphone or tablet. This creates a professional, secure, and organized visitor management process with automatic digital ...",
-        link: "https://play.google.com/store/apps/details?id=com.peccular.entrybook",
-    },
+    // {
+    //     id: 4,
+    //     image: 'https://play-lh.googleusercontent.com/b8qE-m5Iuks42yYQLROLteUCDw1ufVs6dC91Z4xB7DjWRhqU51QXRLhAqKLjm1eqnDvm2lFU0YyO2BmLXdibww=w240-h480-rw',
+    //     title: "Entry Book - Visitor Management",
+    //     description:
+    //         "Entry Book – Visitor Management Android App is a modern digital system that replaces outdated manual logbooks used in offices, buildings, factories, warehouses, and events. Instead of recording visitor names, contact details, and purpose of visit on paper, your security personnel or gatekeeper can enter the information directly into the app using a smartphone or tablet. This creates a professional, secure, and organized visitor management process with automatic digital ...",
+    //     link: "https://play.google.com/store/apps/details?id=com.peccular.entrybook",
+    // },
 ];
 
 export const shopifyData = [
