@@ -45,7 +45,7 @@ const Introduction = () => {
         </div>
       </div>
       <div
-        className={`max-w-134 w-full h-full max-lg:mx-auto aspect-[536/636] relative`}
+        className={`max-w-134 w-full h-full max-lg:mx-auto aspect-[536/636] relative group`}
       >
         <img
           className={`w-full h-full absolute bottom-0 object-cover rounded-3xl ${
@@ -56,6 +56,9 @@ const Introduction = () => {
           src="./pratham.png"
           alt="person"
         />
+        <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-xl p-5 text-center opacity-0 group-hover:opacity-50 transition-all duration-1000 ease-out rounded-b-3xl">
+          Full Stack Developer
+        </div>
       </div>
     </div>
   );
